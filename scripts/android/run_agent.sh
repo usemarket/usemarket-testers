@@ -59,12 +59,12 @@ print(ph[ids.index(sys.argv[1]) % len(ph)])' "$PERSONA" "$TEST_PHONE_ALLOWLIST")
 fi
 # Full stack traces of any app crash (the agent only quotes one line), streamed
 # from the start so an agent's `adb logcat -c` cannot wipe them; kept with the
-# encrypted results: the crash buffer plus fatal Java and JS errors
+# encrypted results: the crash buffer plus every error-level line (React Native's
+# own warnings use tags such as unknown:SurfaceMountingManager)
 mkdir -p "results/$PERSONA"
 adb logcat -v threadtime -b crash > "results/$PERSONA/crash-buffer.log" 2>/dev/null &
 CRASHLOG=$!
-adb logcat -v threadtime -b main AndroidRuntime:E ReactNativeJS:E ReactNative:E 'unknown:ReactNative:E' '*:S' \
-  > "results/$PERSONA/app-errors.log" 2>/dev/null &
+adb logcat -v threadtime -b main '*:E' > "results/$PERSONA/app-errors.log" 2>/dev/null &
 CRASHLOG="$CRASHLOG $!"
 claude -p "Read $BRIEF and personas.json, then do the mission until the final report. PERSONA=$PERSONA PLATFORM=android APP_ID=$APP_ID. Device: ${DEVICE}, font scale x${FONT_SCALE:-1.0}, theme ${THEME:-light}, language $LOCALE. Report anything that does not fit this screen (cut text, off-screen buttons, broken layout)." \
   --model "${MODEL:-sonnet}" --max-turns 400 --output-format json \

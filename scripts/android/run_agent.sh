@@ -57,16 +57,25 @@ ph=[x.strip() for x in sys.argv[2].split(",") if x.strip()]
 print(ph[ids.index(sys.argv[1]) % len(ph)])' "$PERSONA" "$TEST_PHONE_ALLOWLIST")
   printf 'phone: %s\ncode: %s\n' "$PHONE" "${TEST_OTP:-}" > test-login.txt
 fi
+# Full stack traces of any app crash (the agent only quotes one line), streamed
+# from the start so an agent's `adb logcat -c` cannot wipe them; kept with the
+# encrypted results: the crash buffer plus fatal Java and JS errors
+mkdir -p "results/$PERSONA"
+adb logcat -v threadtime -b crash > "results/$PERSONA/crash-buffer.log" 2>/dev/null &
+CRASHLOG=$!
+adb logcat -v threadtime -b main AndroidRuntime:E ReactNativeJS:E ReactNative:E 'unknown:ReactNative:E' '*:S' \
+  > "results/$PERSONA/app-errors.log" 2>/dev/null &
+CRASHLOG="$CRASHLOG $!"
 claude -p "Read $BRIEF and personas.json, then do the mission until the final report. PERSONA=$PERSONA PLATFORM=android APP_ID=$APP_ID. Device: ${DEVICE}, font scale x${FONT_SCALE:-1.0}, theme ${THEME:-light}, language $LOCALE. Report anything that does not fit this screen (cut text, off-screen buttons, broken layout)." \
   --model "${MODEL:-sonnet}" --max-turns 400 --output-format json \
   --allowedTools "Bash(adb:*),Bash(python3 scripts/android/screen.py:*),Bash(python3 scripts/android/type.py:*),Bash(sleep:*),Bash(ls:*),Bash(cat:*),Bash(mkdir:*),Read,Write,Edit" \
   > results/agent-output.json 2> results/agent-errors.txt
 CODE=$?
 python3 scripts/agent_status.py results/agent-output.json results/agent-errors.txt "$PERSONA" || true
-# Full stack traces of any app crash (the agent only quotes one line), kept with
-# the encrypted results: Android's crash buffer plus the app's fatal JS errors
-mkdir -p "results/$PERSONA"
-{ adb logcat -b crash -d; adb logcat -d -s AndroidRuntime:E ReactNativeJS:E; } > "results/$PERSONA/crash-log.txt" 2>/dev/null
+kill $CRASHLOG 2>/dev/null; sleep 1
+cat "results/$PERSONA/crash-buffer.log" "results/$PERSONA/app-errors.log" 2>/dev/null |
+  grep -v '^--------- beginning of' > "results/$PERSONA/crash-log.txt"
+rm -f "results/$PERSONA/crash-buffer.log" "results/$PERSONA/app-errors.log"
 [ -s "results/$PERSONA/crash-log.txt" ] || rm -f "results/$PERSONA/crash-log.txt"
 if [ -n "$REC" ]; then
   touch /tmp/stop-rec; adb shell pkill -INT screenrecord; sleep 4; kill "$REC" 2>/dev/null

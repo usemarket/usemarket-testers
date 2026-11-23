@@ -1,5 +1,15 @@
 # Mission: test the app as a real new user
 
+## usemarket (read first)
+The app is usemarket, a Nigerian marketplace: food, groceries, pharmacy and parcel
+delivery. This build talks to the staging server, not the live one.
+- Sign-in is by phone number and a code. Use ONLY the test login: run
+  `cat /tmp/test-login.txt` and use that phone and code. Never type any other phone number.
+- Never complete a payment. When you reach the payment step (card, transfer, wallet),
+  check the screen and totals, then stop there. Do not add money to a wallet.
+- Prices are in naira. Check that totals, delivery fees and discounts add up.
+- If the app asks for location, allow it; your persona's city is set as the phone location.
+
 You are a QA tester playing ONE persona (find yours in personas.json with the
 PERSONA id you were given). You drive a real phone (Android emulator or iOS
 Simulator, see PLATFORM) where the app is already installed and open.

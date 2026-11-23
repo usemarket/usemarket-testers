@@ -47,6 +47,8 @@ if [ "${RECORD_VIDEO:-false}" = true ]; then
 fi
 # 5. The agent: only the listed tools, nothing else (another model API if llm_base_url is set)
 source scripts/llm_env.sh || exit 1
+# Test login for apps that sign in by phone (secrets TEST_PHONE / TEST_OTP), outside results/
+[ -n "${TEST_PHONE:-}" ] && printf 'phone: %s\ncode: %s\n' "$TEST_PHONE" "${TEST_OTP:-}" > /tmp/test-login.txt
 claude -p "Read $BRIEF and personas.json, then do the mission until the final report. PERSONA=$PERSONA PLATFORM=android APP_ID=$APP_ID. Device: ${DEVICE}, font scale x${FONT_SCALE:-1.0}, theme ${THEME:-light}, language $LOCALE. Report anything that does not fit this screen (cut text, off-screen buttons, broken layout)." \
   --model "${MODEL:-sonnet}" --max-turns 400 --output-format json \
   --allowedTools "Bash(adb:*),Bash(python3 scripts/android/screen.py:*),Bash(python3 scripts/android/type.py:*),Bash(sleep:*),Bash(ls:*),Bash(cat:*),Bash(mkdir:*),Read,Write,Edit" \

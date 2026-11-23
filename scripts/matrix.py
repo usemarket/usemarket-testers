@@ -1,5 +1,5 @@
 """Builds the job matrix: one row per requested persona, with its device.
-Env: PERSONAS (comma-separated ids, "all" for every persona of the platform, "none" or empty to skip it), PLATFORM (android | ios).
+Env: PERSONAS (comma-separated ids, "all" for every customer persona of the platform, "none" or empty to skip it), PLATFORM (android | ios).
 Prints <platform>=<json> for $GITHUB_OUTPUT."""
 import json, os
 
@@ -9,7 +9,8 @@ personas = {p["id"]: p for p in json.load(open("personas.json", encoding="utf-8"
 if wanted == ["none"]:
     wanted = []
 elif wanted == ["all"]:
-    wanted = [pid for pid, p in personas.items() if p.get("platform") == platform]
+    # Customer personas only: vendor and rider personas test other apps, so they run only when named
+    wanted = [pid for pid, p in personas.items() if p.get("platform") == platform and "role" not in p]
 missing = [p for p in wanted if p not in personas]
 if missing:
     raise SystemExit(f"Unknown personas: {missing}")

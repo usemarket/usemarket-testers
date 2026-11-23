@@ -698,5 +698,65 @@
       "text_size": "extra-large",
       "theme": "light"
     }
+  },
+  {
+    "id": "kunle",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "profile": "Owner of a grocery shop in Ibadan, 45, runs the shop from his phone between customers, not patient with long forms.",
+    "goal": "Sign in, open Test Grocery Ibadan 1, add a new product with a price and stock, publish it, then change its price and mark another product out of stock. Check the orders screen and the earnings screen.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel 6, Android 13",
+      "profile": "pixel_6",
+      "android_api": 33,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "adaeze",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "profile": "Pharmacist who manages a shop in Akure, 38, careful, large text, dark mode.",
+    "goal": "Sign in, switch to Test Pharmacy Akure 1, check the opening hours and change them, look for incoming orders and how to accept one, then look at payouts and bank details.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14, 130% font",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 1.3,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "sule",
+    "platform": "android",
+    "role": "rider",
+    "phone": "+2348000000003",
+    "profile": "Motorbike rider in Ibadan, 27, uses a cheap small phone outdoors, taps fast.",
+    "goal": "Sign in, go online, look for delivery offers, open earnings and delivery history, check the profile and documents, then go offline and sign out.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Small phone, Android 11",
+      "profile": "Nexus 5",
+      "android_api": 30,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
   }
 ]

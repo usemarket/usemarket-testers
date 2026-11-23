@@ -37,10 +37,15 @@ def job(name):
 
 
 class Matrix(unittest.TestCase):
-    def test_all_takes_every_persona_of_the_platform(self):
+    def test_all_takes_every_customer_persona_of_the_platform(self):
         for platform in ("android", "ios"):
-            expected = [p["id"] for p in PERSONAS if p["platform"] == platform]
+            expected = [p["id"] for p in PERSONAS if p["platform"] == platform and "role" not in p]
             self.assertEqual([r["persona"] for r in rows(platform, "all")], expected)
+
+    def test_vendor_and_rider_personas_run_only_when_named(self):
+        roles = [p["id"] for p in PERSONAS if p["platform"] == "android" and "role" in p]
+        self.assertTrue(roles)
+        self.assertEqual([r["persona"] for r in rows("android", ",".join(roles))], roles)
 
     def test_none_and_empty_skip_the_platform(self):
         self.assertEqual(rows("ios", "none"), [])

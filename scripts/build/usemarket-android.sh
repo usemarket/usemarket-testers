@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Builds the usemarket customer app (apps/frontend, Expo, pnpm workspace) as an
-# x86_64 release APK that talks to staging. Runs from the app folder (src/apps/frontend).
+# Builds a usemarket app (customer apps/frontend, merchant apps/merchant-app or rider
+# apps/rider-mobile: Expo, pnpm workspace) as an
+# x86_64 release APK that talks to staging. Runs from the app folder (src/<app_dir>).
 # Output: android/app/build/outputs/apk/release/app-release.apk (set as apk_path)
 set -euo pipefail
 export CI=1 EXPO_PUBLIC_API_URL=https://staging.usemarket.store

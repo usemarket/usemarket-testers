@@ -10,37 +10,37 @@ on:
     inputs:
       android_personas:
         description: Android personas from personas.json (comma-separated, all = every Android persona, none = skip Android)
-        default: "anna,malik"
+        default: "tunde,bisi,ade,chioma,ngozi,emeka,funmi,musa,kemi,uche"
       ios_personas:
         description: iOS personas from personas.json (comma-separated, all = every iOS persona, none = skip iOS)
-        default: "clara,jonas"
+        default: "sade,ibrahim,tobi,zainab,femi,amaka,olusegun,halima,dayo,efosa"
       app_dir:
         description: App folder (where package.json is)
-        default: demo-app
+        default: apps/frontend
       app_id:
         description: Android package / iOS bundle id (if a platform uses another id, the one inside its built app is used)
-        default: com.example.tinytodo
+        default: usemarket.store
       framework:
         description: auto, flutter, expo, react-native, capacitor, kmp, native or maui
         default: auto
       android_build:
         description: "Custom Android build command or prebuilt download (optional, then set apk_path)"
-        default: ""
+        default: "bash $GITHUB_WORKSPACE/scripts/build/usemarket-android.sh"
       apk_path:
         description: Path of the .apk produced by android_build
-        default: ""
+        default: android/app/build/outputs/apk/release/app-release.apk
       ios_build:
         description: "Custom iOS build command or prebuilt download (optional, then set ios_app_path)"
-        default: ""
+        default: "bash $GITHUB_WORKSPACE/scripts/build/usemarket-ios.sh"
       ios_app_path:
         description: Path of the Simulator .app produced by ios_build
-        default: ""
+        default: build/usemarket.app
       build_args:
         description: "Extra arguments for the automatic build, both platforms: --dart-define=API_URL=https://... for Flutter, Gradle and xcodebuild arguments for the others. Public on a public repo: put keys in the BUILD_ARGS secret"
         default: ""
       source_repo:
         description: owner/name of the app repo (empty = this repo)
-        default: ""
+        default: usemarket/usemarket
       ref:
         description: Branch, tag or full SHA of the app repo (empty = default branch)
         default: ""
@@ -104,7 +104,7 @@ jobs:
           path: src
           persist-credentials: false
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 24 }
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: "17" }
       - uses: gradle/actions/setup-gradle@v4   # Gradle cache between runs
@@ -121,6 +121,7 @@ jobs:
           BUILD_ARGS: ${{ inputs.build_args }}
           BUILD_ARGS_SECRET: ${{ secrets.BUILD_ARGS }}
           ARTIFACT: ${{ inputs.apk_path }}
+          GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLE_MAP_API_KEY }}
         run: bash scripts/build/android.sh "$APP_DIR" "${{ inputs.framework }}"
       - name: Encrypt APK
         env: { ARTIFACT_PASSPHRASE: "${{ secrets.ARTIFACT_PASSPHRASE }}" }
@@ -150,7 +151,7 @@ jobs:
           path: src
           persist-credentials: false
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 24 }
       - uses: actions/setup-java@v4   # Kotlin Multiplatform builds call Gradle from Xcode
         with: { distribution: temurin, java-version: "17" }
       - name: Latest Xcode
@@ -249,6 +250,8 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           BLOCK_HOSTS: ${{ inputs.block_hosts }}
           RECORD_VIDEO: ${{ inputs.record_video }}
+          TEST_PHONE: ${{ secrets.TEST_PHONE }}
+          TEST_OTP: ${{ secrets.TEST_OTP }}
         with:
           api-level: ${{ matrix.api }}
           target: google_apis
@@ -353,6 +356,8 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           BLOCK_HOSTS: ${{ inputs.block_hosts }}
           RECORD_VIDEO: ${{ inputs.record_video }}
+          TEST_PHONE: ${{ secrets.TEST_PHONE }}
+          TEST_OTP: ${{ secrets.TEST_OTP }}
         run: bash scripts/ios/run_agent.sh
 
       - name: Encrypt results

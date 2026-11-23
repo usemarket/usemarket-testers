@@ -5,8 +5,17 @@
     "profile": "Retired teacher, 68, low patience with jargon, uses large text.",
     "goal": "Create an account and set up her first item without help.",
     "locale": "en-GB",
-    "geo": [51.5072, -0.1276],
-    "device": {"name": "Small phone, Android 11", "profile": "Nexus 5", "android_api": 30, "font_scale": 1.3, "theme": "light"}
+    "geo": [
+      51.5072,
+      -0.1276
+    ],
+    "device": {
+      "name": "Small phone, Android 11",
+      "profile": "Nexus 5",
+      "android_api": 30,
+      "font_scale": 1.3,
+      "theme": "light"
+    }
   },
   {
     "id": "malik",
@@ -14,8 +23,17 @@
     "profile": "Student, 21, skips every text, taps fast, dark mode everywhere.",
     "goal": "Reach the main feature as fast as possible, skipping optional steps.",
     "locale": "en-US",
-    "geo": [40.7128, -74.006],
-    "device": {"name": "Pixel 7, Android 14", "profile": "pixel_7", "android_api": 34, "font_scale": 1.0, "theme": "dark"}
+    "geo": [
+      40.7128,
+      -74.006
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
   },
   {
     "id": "layla",
@@ -23,8 +41,17 @@
     "profile": "Pharmacist, 39, reads Arabic, expects every screen to flow right to left.",
     "goal": "Do the main task end to end and check that text, icons and arrows are mirrored.",
     "locale": "ar-EG",
-    "geo": [30.0444, 31.2357],
-    "device": {"name": "Pixel 6, Android 13", "profile": "pixel_6", "android_api": 33, "font_scale": 1.15, "theme": "light"}
+    "geo": [
+      30.0444,
+      31.2357
+    ],
+    "device": {
+      "name": "Pixel 6, Android 13",
+      "profile": "pixel_6",
+      "android_api": 33,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
   },
   {
     "id": "kenji",
@@ -32,8 +59,17 @@
     "profile": "Office worker, 29, reads Japanese, uses the app one-handed on the train.",
     "goal": "Finish the main task in short sessions, leaving the app and coming back.",
     "locale": "ja-JP",
-    "geo": [35.6762, 139.6503],
-    "device": {"name": "Pixel 4, Android 11", "profile": "pixel_4", "android_api": 30, "font_scale": 1.0, "theme": "dark"}
+    "geo": [
+      35.6762,
+      139.6503
+    ],
+    "device": {
+      "name": "Pixel 4, Android 11",
+      "profile": "pixel_4",
+      "android_api": 30,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
   },
   {
     "id": "grace",
@@ -41,8 +77,17 @@
     "profile": "Retired nurse, 74, low vision, uses Android's largest font size (200%).",
     "goal": "Read every screen and complete one task without zooming.",
     "locale": "en-US",
-    "geo": [41.8781, -87.6298],
-    "device": {"name": "Pixel 7, Android 14, 200% font", "profile": "pixel_7", "android_api": 34, "font_scale": 2.0, "theme": "light"}
+    "geo": [
+      41.8781,
+      -87.6298
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14, 200% font",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 2.0,
+      "theme": "light"
+    }
   },
   {
     "id": "lucia",
@@ -50,8 +95,17 @@
     "profile": "Teacher, 47, uses the family tablet, reads Spanish.",
     "goal": "Use the main feature on the big screen and judge whether the layout uses the space.",
     "locale": "es-ES",
-    "geo": [40.4168, -3.7038],
-    "device": {"name": "Pixel Tablet, Android 14", "profile": "pixel_tablet", "android_api": 34, "font_scale": 1.0, "theme": "light"}
+    "geo": [
+      40.4168,
+      -3.7038
+    ],
+    "device": {
+      "name": "Pixel Tablet, Android 14",
+      "profile": "pixel_tablet",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
   },
   {
     "id": "ravi",
@@ -59,8 +113,17 @@
     "profile": "Shop owner, 44, reads Hindi, new to apps, careful with every button.",
     "goal": "Understand what the app is for and finish one task without English.",
     "locale": "hi-IN",
-    "geo": [28.6139, 77.209],
-    "device": {"name": "Small phone, Android 10", "profile": "Nexus 5X", "android_api": 29, "font_scale": 1.15, "theme": "light"}
+    "geo": [
+      28.6139,
+      77.209
+    ],
+    "device": {
+      "name": "Small phone, Android 10",
+      "profile": "Nexus 5X",
+      "android_api": 29,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
   },
   {
     "id": "olga",
@@ -68,8 +131,17 @@
     "profile": "Translator, 36, reads Russian, spots clumsy wording and cut-off labels.",
     "goal": "Go through every settings screen and check that each label fits.",
     "locale": "ru-RU",
-    "geo": [55.7558, 37.6173],
-    "device": {"name": "Pixel 5, Android 12", "profile": "pixel_5", "android_api": 31, "font_scale": 1.0, "theme": "dark"}
+    "geo": [
+      55.7558,
+      37.6173
+    ],
+    "device": {
+      "name": "Pixel 5, Android 12",
+      "profile": "pixel_5",
+      "android_api": 31,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
   },
   {
     "id": "felipe",
@@ -77,8 +149,17 @@
     "profile": "Delivery rider, 27, reads Portuguese, cheap phone, taps fast between deliveries.",
     "goal": "Get to the main feature as fast as possible and use it twice in a row.",
     "locale": "pt-BR",
-    "geo": [-23.5505, -46.6333],
-    "device": {"name": "Pixel 3a, Android 12", "profile": "pixel_3a", "android_api": 31, "font_scale": 1.15, "theme": "light"}
+    "geo": [
+      -23.5505,
+      -46.6333
+    ],
+    "device": {
+      "name": "Pixel 3a, Android 12",
+      "profile": "pixel_3a",
+      "android_api": 31,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
   },
   {
     "id": "mehmet",
@@ -86,8 +167,17 @@
     "profile": "Engineer, 33, reads Turkish, types names with İ, ş and ğ, tries odd input.",
     "goal": "Fill every text field with Turkish characters, emoji and very long text.",
     "locale": "tr-TR",
-    "geo": [41.0082, 28.9784],
-    "device": {"name": "Pixel 8, Android 15", "profile": "pixel_8", "android_api": 35, "font_scale": 1.0, "theme": "dark"}
+    "geo": [
+      41.0082,
+      28.9784
+    ],
+    "device": {
+      "name": "Pixel 8, Android 15",
+      "profile": "pixel_8",
+      "android_api": 35,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
   },
   {
     "id": "clara",
@@ -95,8 +185,16 @@
     "profile": "Designer, 34, notices every misaligned pixel, refuses location access.",
     "goal": "Explore the app and judge whether it is worth paying for.",
     "locale": "fr-FR",
-    "geo": [48.8566, 2.3522],
-    "device": {"simulator": "iPhone SE (3rd generation)", "ios": 18, "text_size": "large", "theme": "light"}
+    "geo": [
+      48.8566,
+      2.3522
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
   },
   {
     "id": "jonas",
@@ -104,8 +202,16 @@
     "profile": "Engineer, 45, uses an iPad with a large accessibility text size.",
     "goal": "Complete the main task, then try to break it with odd inputs.",
     "locale": "de-DE",
-    "geo": [52.52, 13.405],
-    "device": {"simulator": "iPad Air 11-inch (M2)", "ios": 18, "text_size": "accessibility-extra-large", "theme": "dark"}
+    "geo": [
+      52.52,
+      13.405
+    ],
+    "device": {
+      "simulator": "iPad Air 11-inch (M2)",
+      "ios": 18,
+      "text_size": "accessibility-extra-large",
+      "theme": "dark"
+    }
   },
   {
     "id": "noah",
@@ -113,8 +219,16 @@
     "profile": "Sales rep, 41, big iPhone, the largest standard text size, always in a hurry.",
     "goal": "Do the main task quickly between two meetings.",
     "locale": "en-US",
-    "geo": [30.2672, -97.7431],
-    "device": {"simulator": "iPhone 16 Pro Max", "ios": 18, "text_size": "extra-extra-extra-large", "theme": "light"}
+    "geo": [
+      30.2672,
+      -97.7431
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro Max",
+      "ios": 18,
+      "text_size": "extra-extra-extra-large",
+      "theme": "light"
+    }
   },
   {
     "id": "yuki",
@@ -122,8 +236,16 @@
     "profile": "Student, 20, reads Japanese, dark mode, expects a polished app.",
     "goal": "Explore everything and decide whether she would recommend it to a friend.",
     "locale": "ja-JP",
-    "geo": [34.6937, 135.5023],
-    "device": {"simulator": "iPhone 16", "ios": 18, "text_size": "medium", "theme": "dark"}
+    "geo": [
+      34.6937,
+      135.5023
+    ],
+    "device": {
+      "simulator": "iPhone 16",
+      "ios": 18,
+      "text_size": "medium",
+      "theme": "dark"
+    }
   },
   {
     "id": "amira",
@@ -131,8 +253,16 @@
     "profile": "Product manager, 31, reads Arabic, expects a mirrored right-to-left layout.",
     "goal": "Complete the main task and check that navigation, icons and numbers read right to left.",
     "locale": "ar-SA",
-    "geo": [24.7136, 46.6753],
-    "device": {"simulator": "iPhone 16 Pro", "ios": 18, "text_size": "large", "theme": "light"}
+    "geo": [
+      24.7136,
+      46.6753
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
   },
   {
     "id": "mateo",
@@ -140,8 +270,16 @@
     "profile": "Musician, 26, reads Spanish, holds an iPad mini in one hand.",
     "goal": "Use the main feature, leave the app in the middle of it, then come back.",
     "locale": "es-MX",
-    "geo": [19.4326, -99.1332],
-    "device": {"simulator": "iPad mini (A17 Pro)", "ios": 18, "text_size": "large", "theme": "light"}
+    "geo": [
+      19.4326,
+      -99.1332
+    ],
+    "device": {
+      "simulator": "iPad mini (A17 Pro)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
   },
   {
     "id": "sven",
@@ -149,8 +287,16 @@
     "profile": "Retired engineer, 80, reads Swedish, the largest accessibility text on a small iPhone.",
     "goal": "Complete one task: every button must stay readable and reachable.",
     "locale": "sv-SE",
-    "geo": [59.3293, 18.0686],
-    "device": {"simulator": "iPhone SE (3rd generation)", "ios": 18, "text_size": "accessibility-extra-extra-extra-large", "theme": "dark"}
+    "geo": [
+      59.3293,
+      18.0686
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "accessibility-extra-extra-extra-large",
+      "theme": "dark"
+    }
   },
   {
     "id": "giulia",
@@ -158,8 +304,16 @@
     "profile": "Lawyer, 55, reads Italian, larger accessibility text, reads every word.",
     "goal": "Read every screen, including the fine print, and check that no text is cut off.",
     "locale": "it-IT",
-    "geo": [41.9028, 12.4964],
-    "device": {"simulator": "iPhone 16 Plus", "ios": 18, "text_size": "accessibility-medium", "theme": "light"}
+    "geo": [
+      41.9028,
+      12.4964
+    ],
+    "device": {
+      "simulator": "iPhone 16 Plus",
+      "ios": 18,
+      "text_size": "accessibility-medium",
+      "theme": "light"
+    }
   },
   {
     "id": "minjun",
@@ -167,8 +321,16 @@
     "profile": "Architect, 33, reads Korean, big iPad with small text, likes dense layouts.",
     "goal": "Use the app on the big screen and report wasted space or stretched layouts.",
     "locale": "ko-KR",
-    "geo": [37.5665, 126.978],
-    "device": {"simulator": "iPad Pro 13-inch (M4)", "ios": 18, "text_size": "small", "theme": "dark"}
+    "geo": [
+      37.5665,
+      126.978
+    ],
+    "device": {
+      "simulator": "iPad Pro 13-inch (M4)",
+      "ios": 18,
+      "text_size": "small",
+      "theme": "dark"
+    }
   },
   {
     "id": "wei",
@@ -176,7 +338,365 @@
     "profile": "Accountant, 45, reads Simplified Chinese, careful, checks every number.",
     "goal": "Complete the main task and check translations, dates and number formats.",
     "locale": "zh-CN",
-    "geo": [31.2304, 121.4737],
-    "device": {"simulator": "iPhone 16e", "ios": 18, "text_size": "extra-large", "theme": "light"}
+    "geo": [
+      31.2304,
+      121.4737
+    ],
+    "device": {
+      "simulator": "iPhone 16e",
+      "ios": 18,
+      "text_size": "extra-large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "tunde",
+    "platform": "android",
+    "profile": "Banker in Ibadan, 31, orders lunch between meetings, taps fast, dark mode.",
+    "goal": "Set a delivery address, find cooked food and reach checkout as fast as possible. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "bisi",
+    "platform": "android",
+    "profile": "Market trader in Akure, 58, cheap small phone, larger text, little patience for long forms.",
+    "goal": "Sign in, add groceries to the basket and apply the code AKURE4USEMARKET at checkout. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "name": "Small phone, Android 11",
+      "profile": "Nexus 5",
+      "android_api": 30,
+      "font_scale": 1.3,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "ade",
+    "platform": "android",
+    "profile": "University student in Ibadan, 20, browses without signing in, hunts for deals.",
+    "goal": "Without creating an account, find current promotions and shops with a discount badge, then add something to the basket.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel 4, Android 11",
+      "profile": "pixel_4",
+      "android_api": 30,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "chioma",
+    "platform": "android",
+    "profile": "Small business owner in Sango Ota, 35, sends parcels to customers.",
+    "goal": "Sign in and book a parcel delivery to a typed address. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "name": "Pixel 6, Android 13",
+      "profile": "pixel_6",
+      "android_api": 33,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "ngozi",
+    "platform": "android",
+    "profile": "Retired nurse in Akure, 70, low vision, uses the largest font size (200%).",
+    "goal": "Sign in, find a pharmacy product and add it to the basket without zooming.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14, 200% font",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 2.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "emeka",
+    "platform": "android",
+    "profile": "Engineer in Sango Ota, 42, careful, edits his basket several times before ordering.",
+    "goal": "Sign in, build a basket from one shop, remove and change items, and check the totals stay right. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "name": "Pixel 8, Android 15",
+      "profile": "pixel_8",
+      "android_api": 35,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "funmi",
+    "platform": "android",
+    "profile": "Mother of three in Ibadan, 44, shops for the week on the family tablet, compares prices before adding anything.",
+    "goal": "Fill a basket with a week of groceries, compare the same item across two shops and keep the cheaper one. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel Tablet, Android 14",
+      "profile": "pixel_tablet",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "musa",
+    "platform": "android",
+    "profile": "Trader in Sango Ota, 46, new to shopping apps, reads English slowly and is careful with every tap.",
+    "goal": "Sign in, set his address, find a shop near him and add a bag of rice to the basket. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "name": "Small phone, Android 10",
+      "profile": "Nexus 5X",
+      "android_api": 29,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "kemi",
+    "platform": "android",
+    "profile": "Product designer in Akure, 30, dark mode, spots clumsy wording, cut-off labels and developer words on screen.",
+    "goal": "Go through every account, address, settings and help screen and check that each label fits and reads like plain English.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "name": "Pixel 5, Android 12",
+      "profile": "pixel_5",
+      "android_api": 31,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "uche",
+    "platform": "android",
+    "profile": "Trader in Sango Ota, 30, cheap phone, slow network, taps fast and does not wait for screens to load.",
+    "goal": "Search for items by name, add items from two different shops and see how the app handles the mixed basket. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "name": "Pixel 3a, Android 12",
+      "profile": "pixel_3a",
+      "android_api": 31,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "sade",
+    "platform": "ios",
+    "profile": "Accountant in Ibadan, 29, refuses location access every time it is asked.",
+    "goal": "Deny location, type a delivery address by hand and find cooked food near it. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "ibrahim",
+    "platform": "ios",
+    "profile": "Civil servant in Akure, 50, uses an iPad with a large accessibility text size, likes to test odd inputs.",
+    "goal": "Browse pharmacy and groceries, then try very long, empty and odd text in search and address fields.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "simulator": "iPad Air 11-inch (M2)",
+      "ios": 18,
+      "text_size": "accessibility-extra-large",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "tobi",
+    "platform": "ios",
+    "profile": "Sales rep in Sango Ota, 41, big iPhone, the largest standard text size, always in a hurry.",
+    "goal": "Sign in, find his past orders and order the same things again as fast as possible. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro Max",
+      "ios": 18,
+      "text_size": "extra-extra-extra-large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "zainab",
+    "platform": "ios",
+    "profile": "Student in Ibadan, 22, dark mode, expects a polished app and chats with shopping assistants.",
+    "goal": "Explore everything, including the in-app chat with the shopping assistant, and decide whether she would recommend the app.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "simulator": "iPhone 16",
+      "ios": 18,
+      "text_size": "medium",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "femi",
+    "platform": "ios",
+    "profile": "Product manager in Akure, 33, hunts for promotions and checks the maths.",
+    "goal": "Find a promotion, apply its code at checkout and check that the discount, delivery fee and total add up. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "amaka",
+    "platform": "ios",
+    "profile": "Musician in Sango Ota, 26, holds an iPad mini in one hand, often switches apps.",
+    "goal": "Build a basket, leave the app in the middle of checkout, come back later and check the basket is still there. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "simulator": "iPad mini (A17 Pro)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "olusegun",
+    "platform": "ios",
+    "profile": "Retired engineer in Ibadan, 78, uses the largest accessibility text size and dark mode.",
+    "goal": "Complete one order up to payment: every button must stay readable and reachable. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "accessibility-extra-extra-extra-large",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "halima",
+    "platform": "ios",
+    "profile": "Lawyer in Akure, 55, larger accessibility text, reads the fine print.",
+    "goal": "Read every screen, including terms, privacy and refund pages, and check that nothing is cut off or missing.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "simulator": "iPhone 16 Plus",
+      "ios": 18,
+      "text_size": "accessibility-medium",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "dayo",
+    "platform": "ios",
+    "profile": "Architect in Ibadan, 34, big iPad with small text and dark mode.",
+    "goal": "Use the app on the big screen and report wasted space, stretched images or layouts made for a phone.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "simulator": "iPad Pro 13-inch (M4)",
+      "ios": 18,
+      "text_size": "small",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "efosa",
+    "platform": "ios",
+    "profile": "Accountant in Akure, 45, careful, checks every number.",
+    "goal": "Check that every price, fee and total is shown in naira with the right format, and that order dates and times look right. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "simulator": "iPhone 16e",
+      "ios": 18,
+      "text_size": "extra-large",
+      "theme": "light"
+    }
   }
 ]

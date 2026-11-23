@@ -450,11 +450,253 @@
       3.3515
     ],
     "device": {
-      "name": "Pixel 6, Android 13, dark",
-      "profile": "pixel_6",
-      "android_api": 33,
+      "name": "Pixel 8, Android 15",
+      "profile": "pixel_8",
+      "android_api": 35,
       "font_scale": 1.0,
       "theme": "dark"
+    }
+  },
+  {
+    "id": "funmi",
+    "platform": "android",
+    "profile": "Mother of three in Ibadan, 44, shops for the week on the family tablet, compares prices before adding anything.",
+    "goal": "Fill a basket with a week of groceries, compare the same item across two shops and keep the cheaper one. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel Tablet, Android 14",
+      "profile": "pixel_tablet",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "musa",
+    "platform": "android",
+    "profile": "Trader in Kano, 46, new to shopping apps, reads English slowly and is careful with every tap. He may be outside the delivery area.",
+    "goal": "Sign in, set his address and find out whether anything can be delivered to him. If not, check that the app says so clearly.",
+    "locale": "en-NG",
+    "geo": [
+      12.0022,
+      8.592
+    ],
+    "device": {
+      "name": "Small phone, Android 10",
+      "profile": "Nexus 5X",
+      "android_api": 29,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "kemi",
+    "platform": "android",
+    "profile": "Product designer in Lekki, 30, dark mode, spots clumsy wording, cut-off labels and developer words on screen.",
+    "goal": "Go through every account, address, settings and help screen and check that each label fits and reads like plain English.",
+    "locale": "en-NG",
+    "geo": [
+      6.4698,
+      3.5852
+    ],
+    "device": {
+      "name": "Pixel 5, Android 12",
+      "profile": "pixel_5",
+      "android_api": 31,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "uche",
+    "platform": "android",
+    "profile": "Trader in Onitsha, 30, cheap phone, slow network, taps fast and does not wait for screens to load.",
+    "goal": "Search for items by name, add items from two different shops and see how the app handles the mixed basket. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.1413,
+      6.8029
+    ],
+    "device": {
+      "name": "Pixel 3a, Android 12",
+      "profile": "pixel_3a",
+      "android_api": 31,
+      "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "sade",
+    "platform": "ios",
+    "profile": "Accountant in Ikeja, 29, refuses location access every time it is asked.",
+    "goal": "Deny location, type a delivery address by hand and find cooked food near it. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.6018,
+      3.3515
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "ibrahim",
+    "platform": "ios",
+    "profile": "Civil servant in Abuja, 50, uses an iPad with a large accessibility text size, likes to test odd inputs.",
+    "goal": "Browse pharmacy and groceries, then try very long, empty and odd text in search and address fields.",
+    "locale": "en-NG",
+    "geo": [
+      9.0765,
+      7.3986
+    ],
+    "device": {
+      "simulator": "iPad Air 11-inch (M2)",
+      "ios": 18,
+      "text_size": "accessibility-extra-large",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "tobi",
+    "platform": "ios",
+    "profile": "Sales rep in Lagos, 41, big iPhone, the largest standard text size, always in a hurry.",
+    "goal": "Sign in, find his past orders and order the same things again as fast as possible. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.5095,
+      3.3711
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro Max",
+      "ios": 18,
+      "text_size": "extra-extra-extra-large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "zainab",
+    "platform": "ios",
+    "profile": "Student in Kaduna, 22, dark mode, expects a polished app and chats with shopping assistants.",
+    "goal": "Explore everything, including the in-app chat with the shopping assistant, and decide whether she would recommend the app.",
+    "locale": "en-NG",
+    "geo": [
+      10.5105,
+      7.4165
+    ],
+    "device": {
+      "simulator": "iPhone 16",
+      "ios": 18,
+      "text_size": "medium",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "femi",
+    "platform": "ios",
+    "profile": "Product manager in Ibadan, 33, hunts for promotions and checks the maths.",
+    "goal": "Find a promotion, apply its code at checkout and check that the discount, delivery fee and total add up. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "simulator": "iPhone 16 Pro",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "amaka",
+    "platform": "ios",
+    "profile": "Musician in Enugu, 26, holds an iPad mini in one hand, often switches apps.",
+    "goal": "Build a basket, leave the app in the middle of checkout, come back later and check the basket is still there. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.4584,
+      7.5464
+    ],
+    "device": {
+      "simulator": "iPad mini (A17 Pro)",
+      "ios": 18,
+      "text_size": "large",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "olusegun",
+    "platform": "ios",
+    "profile": "Retired engineer in Abeokuta, 78, uses the largest accessibility text size and dark mode.",
+    "goal": "Complete one order up to payment: every button must stay readable and reachable. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      7.1475,
+      3.3619
+    ],
+    "device": {
+      "simulator": "iPhone SE (3rd generation)",
+      "ios": 18,
+      "text_size": "accessibility-extra-extra-extra-large",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "halima",
+    "platform": "ios",
+    "profile": "Lawyer in Jos, 55, larger accessibility text, reads the fine print.",
+    "goal": "Read every screen, including terms, privacy and refund pages, and check that nothing is cut off or missing.",
+    "locale": "en-NG",
+    "geo": [
+      9.8965,
+      8.8583
+    ],
+    "device": {
+      "simulator": "iPhone 16 Plus",
+      "ios": 18,
+      "text_size": "accessibility-medium",
+      "theme": "light"
+    }
+  },
+  {
+    "id": "dayo",
+    "platform": "ios",
+    "profile": "Architect in Lagos, 34, big iPad with small text and dark mode.",
+    "goal": "Use the app on the big screen and report wasted space, stretched images or layouts made for a phone.",
+    "locale": "en-NG",
+    "geo": [
+      6.4281,
+      3.4219
+    ],
+    "device": {
+      "simulator": "iPad Pro 13-inch (M4)",
+      "ios": 18,
+      "text_size": "small",
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "efosa",
+    "platform": "ios",
+    "profile": "Accountant in Benin City, 45, careful, checks every number.",
+    "goal": "Check that every price, fee and total is shown in naira with the right format, and that order dates and times look right. Stop at the payment step.",
+    "locale": "en-NG",
+    "geo": [
+      6.335,
+      5.6037
+    ],
+    "device": {
+      "simulator": "iPhone 16e",
+      "ios": 18,
+      "text_size": "extra-large",
+      "theme": "light"
     }
   }
 ]

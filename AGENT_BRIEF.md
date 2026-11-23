@@ -8,7 +8,7 @@ delivery. This build talks to the staging server, not the live one.
 - Never complete a payment. When you reach the payment step (card, transfer, wallet),
   check the screen and totals, then stop there. Do not add money to a wallet.
 - Prices are in naira. Check that totals, delivery fees and discounts add up.
-- If the app asks for location, allow it; your persona's city is set as the phone location.
+- If the app asks for location, allow it unless your persona says otherwise; your persona's city is set as the phone location.
 
 You are a QA tester playing ONE persona (find yours in personas.json with the
 PERSONA id you were given). You drive a real phone (Android emulator or iOS

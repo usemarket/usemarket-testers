@@ -5,6 +5,9 @@
 set -euo pipefail
 export CI=1 EXPO_PUBLIC_API_URL=https://staging.usemarket.store
 npm install -g pnpm@11.13.1
-(cd ../.. && pnpm install --frozen-lockfile)
+# Same install as the app repo's CI (.woodpecker.yml): the customer, merchant and
+# rider apps each rebuild packages/contracts and api-client in postinstall, and run
+# together they write the same dist/ files at once
+(cd ../.. && pnpm install --frozen-lockfile --child-concurrency=1)
 npx expo prebuild --platform android --no-install
 cd android && ./gradlew assembleRelease -PreactNativeArchitectures=x86_64 --build-cache

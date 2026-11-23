@@ -250,7 +250,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           BLOCK_HOSTS: ${{ inputs.block_hosts }}
           RECORD_VIDEO: ${{ inputs.record_video }}
-          TEST_PHONE: ${{ secrets.TEST_PHONE }}
+          TEST_PHONE_ALLOWLIST: ${{ secrets.TEST_PHONE_ALLOWLIST }}
           TEST_OTP: ${{ secrets.TEST_OTP }}
         with:
           api-level: ${{ matrix.api }}
@@ -356,7 +356,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           BLOCK_HOSTS: ${{ inputs.block_hosts }}
           RECORD_VIDEO: ${{ inputs.record_video }}
-          TEST_PHONE: ${{ secrets.TEST_PHONE }}
+          TEST_PHONE_ALLOWLIST: ${{ secrets.TEST_PHONE_ALLOWLIST }}
           TEST_OTP: ${{ secrets.TEST_OTP }}
         run: bash scripts/ios/run_agent.sh
 

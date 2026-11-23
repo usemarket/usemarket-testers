@@ -47,8 +47,16 @@ if [ "${RECORD_VIDEO:-false}" = true ]; then
 fi
 # 5. The agent: only the listed tools, nothing else (another model API if llm_base_url is set)
 source scripts/llm_env.sh || exit 1
-# Test login for apps that sign in by phone (secrets TEST_PHONE / TEST_OTP), outside results/
-[ -n "${TEST_PHONE:-}" ] && printf 'phone: %s\ncode: %s\n' "$TEST_PHONE" "${TEST_OTP:-}" > /tmp/test-login.txt
+# Test login for apps that sign in by phone, outside results/: secret TEST_PHONE_ALLOWLIST
+# (the server's allowlist, comma-separated) and TEST_OTP. Each persona gets one number
+# of the list, by its place in personas.json, so testers rarely share an account
+if [ -n "${TEST_PHONE_ALLOWLIST:-}" ]; then
+  PHONE=$(python3 -c 'import json,sys
+ids=[p["id"] for p in json.load(open("personas.json"))]
+ph=[x.strip() for x in sys.argv[2].split(",") if x.strip()]
+print(ph[ids.index(sys.argv[1]) % len(ph)])' "$PERSONA" "$TEST_PHONE_ALLOWLIST")
+  printf 'phone: %s\ncode: %s\n' "$PHONE" "${TEST_OTP:-}" > /tmp/test-login.txt
+fi
 claude -p "Read $BRIEF and personas.json, then do the mission until the final report. PERSONA=$PERSONA PLATFORM=android APP_ID=$APP_ID. Device: ${DEVICE}, font scale x${FONT_SCALE:-1.0}, theme ${THEME:-light}, language $LOCALE. Report anything that does not fit this screen (cut text, off-screen buttons, broken layout)." \
   --model "${MODEL:-sonnet}" --max-turns 400 --output-format json \
   --allowedTools "Bash(adb:*),Bash(python3 scripts/android/screen.py:*),Bash(python3 scripts/android/type.py:*),Bash(sleep:*),Bash(ls:*),Bash(cat:*),Bash(mkdir:*),Read,Write,Edit" \

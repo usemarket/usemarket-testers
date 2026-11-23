@@ -63,6 +63,11 @@ claude -p "Read $BRIEF and personas.json, then do the mission until the final re
   > results/agent-output.json 2> results/agent-errors.txt
 CODE=$?
 python3 scripts/agent_status.py results/agent-output.json results/agent-errors.txt "$PERSONA" || true
+# Full stack traces of any app crash (the agent only quotes one line), kept with
+# the encrypted results: Android's crash buffer plus the app's fatal JS errors
+mkdir -p "results/$PERSONA"
+{ adb logcat -b crash -d; adb logcat -d -s AndroidRuntime:E ReactNativeJS:E; } > "results/$PERSONA/crash-log.txt" 2>/dev/null
+[ -s "results/$PERSONA/crash-log.txt" ] || rm -f "results/$PERSONA/crash-log.txt"
 if [ -n "$REC" ]; then
   touch /tmp/stop-rec; adb shell pkill -INT screenrecord; sleep 4; kill "$REC" 2>/dev/null
   mkdir -p "results/$PERSONA/video"

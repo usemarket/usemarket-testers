@@ -40,7 +40,7 @@ on:
         default: ""
       source_repo:
         description: owner/name of the app repo (empty = this repo)
-        default: 0xedev/usemarket
+        default: usemarket/usemarket
       ref:
         description: Branch, tag or full SHA of the app repo (empty = default branch)
         default: ""

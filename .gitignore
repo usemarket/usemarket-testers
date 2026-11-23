@@ -8,3 +8,5 @@ demo-app/ios/
 demo-app/.expo/
 .DS_Store
 __pycache__/
+# Test login written by run_agent.sh (never committed, never in results/)
+test-login.txt

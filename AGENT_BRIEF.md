@@ -4,7 +4,7 @@
 The app is usemarket, a Nigerian marketplace: food, groceries, pharmacy and parcel
 delivery. This build talks to the staging server, not the live one.
 - Sign-in is by phone number and a code. Use ONLY the test login: run
-  `cat /tmp/test-login.txt` and use that phone and code. Never type any other phone number.
+  `cat test-login.txt` and use that phone and code. Never type any other phone number.
 - Never complete a payment. When you reach the payment step (card, transfer, wallet),
   check the screen and totals, then stop there. Do not add money to a wallet.
 - Prices are in naira. Check that totals, delivery fees and discounts add up.

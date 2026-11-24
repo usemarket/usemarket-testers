@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **A second reader for results**: with `results_agent_public.pem` in the repo, every encrypted result is also opened by that key's private half, so the coding agent fixing the findings can run `collect.sh <run> <its key>` without the owner's key. The owner's key still opens everything; without the file nothing changes.
 - **usemarket builds after the postinstall change**: the usemarket build scripts build the shared API packages after installing, since the app repo no longer does it on install; without them every APK build failed while bundling.
 - **Gallery photos on Android**: before each agent starts, the phone's gallery holds an ordinary photo and a 12-megapixel camera photo of about 14 MB, so photo pickers can be tested with the size phones really take. [briefs/usemarket-photo-size.md](briefs/usemarket-photo-size.md) checks that the usemarket merchant app shrinks a large photo before upload.
 - **Native checks for usemarket**: [briefs/usemarket-native.md](briefs/usemarket-native.md) sends any of the three usemarket apps through what a browser cannot test: notification and camera permissions, camera and gallery uploads, location denial, leaving and reopening mid-form, the Back button and the keyboard.

@@ -80,5 +80,50 @@ class ResultsPipeline(unittest.TestCase):
         self.assertNotEqual(res.returncode, 0)
 
 
+@unittest.skipUnless(shutil.which("openssl") and shutil.which("bash"), "needs openssl and bash")
+class SecondReader(unittest.TestCase):
+    """results_agent_public.pem wraps the same key for a second reader; each key opens
+    the results through collect.sh, and the owner's path is unchanged."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.owner = new_key(self.tmp / "owner.pem")
+        self.agent = new_key(self.tmp / "agent.pem")
+        runner = self.tmp / "runner"
+        (runner / "results" / "noah").mkdir(parents=True)
+        run(["openssl", "pkey", "-in", str(self.owner), "-pubout", "-out", str(runner / "results_public.pem")])
+        run(["openssl", "pkey", "-in", str(self.agent), "-pubout", "-out", str(runner / "results_agent_public.pem")])
+        (runner / "results/noah/report.md").write_text(REPORT, encoding="utf-8")
+        run(["bash", str(ROOT / "scripts/encrypt_results.sh"), "noah"], cwd=runner)
+        self.enc = runner / "results.enc"
+        shutil.copytree(self.enc, self.tmp / "artifacts" / "results-noah")
+        bin_dir = self.tmp / "bin"
+        bin_dir.mkdir()
+        (bin_dir / "gh").write_text(FAKE_GH)
+        (bin_dir / "gh").chmod(0o755)
+        self.env = dict(os.environ, PATH=f"{bin_dir}{os.pathsep}{os.environ['PATH']}",
+                        FAKE_ARTIFACTS=str(self.tmp / "artifacts"), SUMMARY_GROUPING="0")
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp)
+
+    def collect(self, key, out):
+        return subprocess.run(["bash", str(ROOT / "scripts/collect.sh"), "123", str(key), str(self.tmp / out)],
+                              cwd=self.tmp, env=self.env, capture_output=True, text=True)
+
+    def test_both_keys_open_the_results(self):
+        self.assertEqual(sorted(p.name for p in self.enc.iterdir()),
+                         ["noah.agent-key.bin", "noah.key.bin", "noah.tgz.enc"])
+        for key, out in ((self.owner, "by-owner"), (self.agent, "by-agent")):
+            res = self.collect(key, out)
+            self.assertEqual(res.returncode, 0, res.stdout + res.stderr)
+            self.assertEqual((self.tmp / out / "noah/results/noah/report.md").read_text(encoding="utf-8"), REPORT)
+
+    def test_a_third_key_opens_nothing(self):
+        res = self.collect(new_key(self.tmp / "other.pem"), "by-other")
+        self.assertNotEqual(res.returncode, 0)
+        self.assertFalse((self.tmp / "by-other/noah/results").exists())
+
+
 if __name__ == "__main__":
     unittest.main()

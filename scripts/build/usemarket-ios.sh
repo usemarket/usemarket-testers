@@ -9,6 +9,10 @@ npm install -g pnpm@11.13.1
 # rider apps each rebuild packages/contracts and api-client in postinstall, and run
 # together they write the same dist/ files at once
 (cd ../.. && pnpm install --frozen-lockfile --child-concurrency=1)
+# The shared API packages (contracts, api-client) the apps import are no longer
+# built on install (usemarket#978 dropped the root postinstall): build them, or
+# bundling the app fails with "Unable to resolve @usemarket/contracts"
+(cd ../.. && pnpm run --if-present build:api-client)
 npx expo prebuild --platform ios --no-install
 (cd ios && pod install)
 WS=$(find ios -maxdepth 1 -name '*.xcworkspace' | head -1)

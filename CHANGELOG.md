@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Gallery photos on Android**: before each agent starts, the phone's gallery holds an ordinary photo and a 12-megapixel camera photo of about 14 MB, so photo pickers can be tested with the size phones really take. [briefs/usemarket-photo-size.md](briefs/usemarket-photo-size.md) checks that the usemarket merchant app shrinks a large photo before upload.
 - **Native checks for usemarket**: [briefs/usemarket-native.md](briefs/usemarket-native.md) sends any of the three usemarket apps through what a browser cannot test: notification and camera permissions, camera and gallery uploads, location denial, leaving and reopening mid-form, the Back button and the keyboard.
 - **Android builds of large React Native apps**: `build-android` caps the Gradle (4 GB) and Kotlin (2 GB) heaps and adds a 10 GB swap file, and may take 120 minutes. The usemarket merchant release build outgrew the 16 GB runner with the default heaps and stalled until the 60-minute limit.
 - **usemarket merchant and rider apps**: vendor personas (kunle, adaeze) and a rider persona (sule) with their own briefs ([briefs/usemarket-vendor.md](briefs/usemarket-vendor.md), [briefs/usemarket-rider.md](briefs/usemarket-rider.md)). A persona with a `phone` signs in with that staging account instead of a number of `TEST_PHONE_ALLOWLIST`. `all` still picks only customer personas; vendor and rider personas run when named, with `app_dir`, `app_id` and `brief` set for their app.

@@ -29,6 +29,20 @@ adb shell settings put system font_scale "${FONT_SCALE:-1.0}"
 adb emu geo fix "${GEO#*,}" "${GEO%,*}" >/dev/null 2>&1   # longitude first
 adb shell monkey -p "$APP_ID" -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1
 adb logcat -c; sleep 5
+# 3b. Two photos in the gallery for any photo picker: an ordinary one and a
+# 12 MP camera photo of about 12 MB, the size phones take that apps must shrink
+python3 - <<'PY' || true
+from PIL import Image
+import os
+img = Image.frombytes("RGB", (4000, 3000), os.urandom(4000 * 3000 * 3))
+img.save("/tmp/large-camera-photo.jpg", quality=95)
+img.resize((1200, 900)).save("/tmp/ordinary-photo.jpg", quality=85)
+PY
+for f in large-camera-photo.jpg ordinary-photo.jpg; do
+  [ -f "/tmp/$f" ] && adb push "/tmp/$f" "/sdcard/Pictures/$f" >/dev/null 2>&1 &&
+    adb shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d "file:///sdcard/Pictures/$f" >/dev/null 2>&1
+done
+adb shell content call --method scan_volume --uri content://media --arg external_primary >/dev/null 2>&1 || true
 # 4. Optional screen recording, kept in results/ (encrypted like the rest)
 REC=""
 if [ "${RECORD_VIDEO:-false}" = true ]; then

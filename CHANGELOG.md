@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Android builds of large React Native apps**: `build-android` caps the Gradle (4 GB) and Kotlin (2 GB) heaps and adds a 10 GB swap file, and may take 120 minutes. The usemarket merchant release build outgrew the 16 GB runner with the default heaps and stalled until the 60-minute limit.
 - **usemarket merchant and rider apps**: vendor personas (kunle, adaeze) and a rider persona (sule) with their own briefs ([briefs/usemarket-vendor.md](briefs/usemarket-vendor.md), [briefs/usemarket-rider.md](briefs/usemarket-rider.md)). A persona with a `phone` signs in with that staging account instead of a number of `TEST_PHONE_ALLOWLIST`. `all` still picks only customer personas; vendor and rider personas run when named, with `app_dir`, `app_id` and `brief` set for their app.
 - **Build arguments**: the `build_args` input adds arguments to the automatic build of both platforms, like `--dart-define=API_URL=https://staging.example.com` for a Flutter app that needs its backend address (Gradle and xcodebuild arguments for the other frameworks). Keys go in a `BUILD_ARGS` secret, never printed ([scripts/build/args.sh](scripts/build/args.sh)).
 - **How each agent ended, on the run page**: finished, out of turns, usage limit, refused token or key, no API credit, rate limit or overloaded API, as an annotation with what to do next, plus turns and cost in the job summary. Nothing the agent wrote is printed, since public logs are public. `collect.sh` prints the same line for each agent ([scripts/agent_status.py](scripts/agent_status.py)).

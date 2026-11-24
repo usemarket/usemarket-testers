@@ -8,9 +8,10 @@ The app is usemarket Merchant, the shop owners' app of usemarket, a Nigerian mar
 (food, groceries, pharmacy). This build talks to the staging server, not the live one.
 - Sign-in is by phone number and a code. Use ONLY the test login: run
   `cat test-login.txt` and use that phone and code. Never type any other phone number.
-- The test account owns 13 test shops (Test Grocery, Test Kitchen, Test Pharmacy and
-  Test Household in Akure, Ibadan and Sango Ota). Other testers use the same account at the
-  same time, each in a different shop: work ONLY in the shop your persona's goal names.
+- Your test login (your own number) is an owner of the test shops (Test Grocery, Test Kitchen,
+  Test Pharmacy and Test Household in Akure, Ibadan and Sango Ota). Other testers work in the
+  same shops at the same time, each in a different shop: work ONLY in the shop your persona's
+  goal names.
 - Every product, category or deal you create starts with `UX <your persona id>` (for example
   `UX tolu Garri 2kg`), so it is clearly test data. Change only things you created, plus the
   settings your goal names. Never delete a shop, close a shop for good, or remove staff.

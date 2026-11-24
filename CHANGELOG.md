@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Vendor journeys and how easy they are**: [briefs/usemarket-vendor-ux.md](briefs/usemarket-vendor-ux.md) has each vendor persona do one journey of the usemarket merchant app in its own test shop and keep a step log (what they wanted, did and saw, ease 1 to 5), then rank improvements. Four more vendor personas (tolu: catalogue and deals; femi: a kitchen's menu item and orders; chinedu: a first product on a small phone with large text; halima: shop setup), and kunle's and adaeze's goals now cover a full product with photo, and Saturday hours.
 - **Layout evidence for usemarket**: [briefs/usemarket-layout-evidence.md](briefs/usemarket-layout-evidence.md) walks the customer app through the screens where testers saw the keyboard or the View Cart bar cover buttons and prices, and saves the screen layout (uiautomator) and the window and keyboard state at each one, so the cause can be read rather than guessed.
 - **A second reader for results**: with `results_agent_public.pem` in the repo, every encrypted result is also opened by that key's private half, so the coding agent fixing the findings can run `collect.sh <run> <its key>` without the owner's key. The owner's key still opens everything; without the file nothing changes.
 - **usemarket builds after the postinstall change**: the usemarket build scripts build the shared API packages after installing, since the app repo no longer does it on install; without them every APK build failed while bundling.

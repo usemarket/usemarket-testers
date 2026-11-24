@@ -705,7 +705,7 @@
     "role": "vendor",
     "phone": "+2348000000002",
     "profile": "Owner of a grocery shop in Ibadan, 45, runs the shop from his phone between customers, not patient with long forms.",
-    "goal": "Sign in, open Test Grocery Ibadan 1, add a new product with a price and stock, publish it, then change its price and mark another product out of stock. Check the orders screen and the earnings screen.",
+    "goal": "Sign in, open Test Grocery Ibadan 1 and add a new product as a shop owner would: name, price, stock, category and a photo from the gallery, then publish it so customers can buy it. Find it again in your product list and in the shop as a customer would see it, then change its price.",
     "locale": "en-NG",
     "geo": [
       7.3775,
@@ -725,7 +725,7 @@
     "role": "vendor",
     "phone": "+2348000000002",
     "profile": "Pharmacist who manages a shop in Akure, 38, careful, large text, dark mode.",
-    "goal": "Sign in, switch to Test Pharmacy Akure 1, check the opening hours and change them, look for incoming orders and how to accept one, then look at payouts and bank details.",
+    "goal": "Sign in, switch to Test Pharmacy Akure 1, check the opening hours and change Saturday's hours, find where incoming orders appear and how you would accept or reject one, then find payouts and where bank details go.",
     "locale": "en-NG",
     "geo": [
       7.2526,
@@ -756,6 +756,46 @@
       "profile": "Nexus 5",
       "android_api": 30,
       "font_scale": 1.15,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "tolu",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "profile": "Runs a busy household-goods shop in Sango Ota, 33, very fast on the phone, manages 40+ products and hates repeating work.",
+    "goal": "Sign in, open Test Household Sango Ota 1. Manage the catalogue: search your products, change the price of two products, mark one out of stock and back in stock, create a shop category and put two products in it, then look for a way to run a discount or deal on one product.",
+    "locale": "en-NG",
+    "geo": [
+      6.702,
+      3.235
+    ],
+    "device": {
+      "name": "Pixel 8, Android 15",
+      "profile": "pixel_8",
+      "android_api": 35,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
+  },
+  {
+    "id": "chinedu",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "profile": "Sells provisions in Ibadan market, 56, cheap small phone, reads slowly, larger text, not confident with apps; his son set the app up.",
+    "goal": "Sign in, open Test Grocery Ibadan 1 and add one product (a bag of sugar) with its price and how many you have, with a photo from the gallery, and publish it. Then find where today's orders and today's money are.",
+    "locale": "en-NG",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Small phone, Android 11",
+      "profile": "Nexus 5",
+      "android_api": 30,
+      "font_scale": 1.3,
       "theme": "light"
     }
   }

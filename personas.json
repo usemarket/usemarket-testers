@@ -798,5 +798,45 @@
       "font_scale": 1.3,
       "theme": "light"
     }
+  },
+  {
+    "id": "segun",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "locale": "en-NG",
+    "profile": "Owns a small restaurant in Akure, 41, cooks and takes orders at the same time, needs everything quick with greasy fingers.",
+    "goal": "Sign in, open Test Kitchen Akure 1. Add a new menu item (a plate of jollof rice with chicken) with price, a photo, preparation time and any options (extra meat, drink) the app allows, set the takeaway container charge, then check how a new order would reach you and how you would mark it ready.",
+    "geo": [
+      7.2526,
+      5.1931
+    ],
+    "device": {
+      "name": "Pixel 6, Android 13",
+      "profile": "pixel_6",
+      "android_api": 33,
+      "font_scale": 1.0,
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "rukayat",
+    "platform": "android",
+    "role": "vendor",
+    "phone": "+2348000000002",
+    "locale": "en-NG",
+    "profile": "New pharmacy owner in Ibadan, 29, organised, setting up her shop properly before her first customers.",
+    "goal": "Sign in, open Test Pharmacy Ibadan 1 and make the shop ready to sell: add a logo and banner from the gallery, check the shop description, address and delivery settings, work through any setup checklist, and look at how to invite a staff member (stop before sending an invite).",
+    "geo": [
+      7.3775,
+      3.947
+    ],
+    "device": {
+      "name": "Pixel 7, Android 14",
+      "profile": "pixel_7",
+      "android_api": 34,
+      "font_scale": 1.0,
+      "theme": "light"
+    }
   }
 ]

@@ -65,12 +65,7 @@ source scripts/llm_env.sh || exit 1
 # (the server's allowlist, comma-separated) and TEST_OTP. Each persona gets one number
 # of the list, by its place in personas.json, so testers rarely share an account
 if [ -n "${TEST_PHONE_ALLOWLIST:-}" ]; then
-  PHONE=$(python3 -c 'import json,sys
-ps=json.load(open("personas.json")); ids=[p["id"] for p in ps]
-me=ps[ids.index(sys.argv[1])]
-ph=[x.strip() for x in sys.argv[2].split(",") if x.strip()]
-# A vendor or rider persona names the staging account of its app (personas.json "phone")
-print(me.get("phone") or ph[ids.index(sys.argv[1]) % len(ph)])' "$PERSONA" "$TEST_PHONE_ALLOWLIST")
+  PHONE=$(python3 scripts/test_phone.py "$PERSONA" "$TEST_PHONE_ALLOWLIST")
   printf 'phone: %s\ncode: %s\n' "$PHONE" "${TEST_OTP:-}" > test-login.txt
 fi
 # Full stack traces of any app crash (the agent only quotes one line), streamed
